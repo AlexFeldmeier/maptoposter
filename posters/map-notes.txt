@@ -1,0 +1,52 @@
+.venv\Scripts\activate.bat
+
+MSP
+python3 create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 8.5 -H 11 -d 200000 -t midnight_blue
+
+MSP phone
+python3 create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 2.9 -H 6.2 -d 150000 -t midnight_blue --no-text --no-gradient
+
+Eagan
+python3 create_map_poster.py -c "eagan, mn" -C "USA" --name "Eagan" --country-label "Minnesota" -W 8.5 -H 11 -d 28000 -t midnight_blue
+
+Eagan phone
+python3 create_map_poster.py --lat 44.806 --lon -93.157 --name "Eagan" --country-label "Minnesota" -W 2.9 -H 6.1 -d 18000 -t ocean --no-text --no-gradient
+
+Waunakee
+python3 create_map_poster.py -c "village center pond waunakee" -C "USA" --name "Waunakee" --country-label "Wisconsin" -W 8.5 -H 11 -d 12000 -t custom
+{
+  "name": "Custom",
+  "description": "Custom",
+  "bg": "#0D0D1A",
+  "text": "#00FFFF",
+  "gradient_color": "#0D0D1A",
+  "water": "#0A0A15",
+  "parks": "#151525",
+  "road_motorway": "#FF00FF",
+  "road_primary": "#FF00FF",
+  "road_secondary": "#FF00FF",
+  "road_tertiary": "#0098A0",
+  "road_residential": "#006870",
+  "road_default": "#0098A0"
+}
+
+Madison
+python3 create_map_poster.py -c "madison" -C "USA" --name "Madison" --country-label "Wisconsin" -W 8.5 -H 11 -d 65000 -t terracotta
+
+Star Lake
+python3 create_map_poster.py --lat 46.0309 --lon -89.4845 --name "Star Lake" --country-label "Wisconsin" -W 8.5 -H 11 -d 18000 -t custom
+{
+  "name": "Custom",
+  "description": "Custom",
+  "bg": "#F0F4F0",
+  "text": "#2D4A3E",
+  "gradient_color": "#F0F4F0",
+  "water": "#B8D8E8",
+  "parks": "#D4E8D4",
+  "road_motorway": "#2D4A3E",
+  "road_primary": "#3D6B55",
+  "road_secondary": "#5A8A70",
+  "road_tertiary": "#7AAA90",
+  "road_residential": "#A0C8B0",
+  "road_default": "#7AAA90"
+}
