@@ -622,8 +622,6 @@ def create_poster(
     # Base font sizes (at 12 inches width)
     base_main = 60
     base_sub = 22
-    base_coords = 14
-    base_attr = 8
 
     # 4. Typography - use custom fonts if provided, otherwise use default FONTS
     active_fonts = fonts or FONTS
@@ -632,21 +630,11 @@ def create_poster(
         font_sub = FontProperties(
             fname=active_fonts["light"], size=base_sub * scale_factor
         )
-        font_coords = FontProperties(
-            fname=active_fonts["regular"], size=base_coords * scale_factor
-        )
-        font_attr = FontProperties(
-            fname=active_fonts["light"], size=base_attr * scale_factor
-        )
     else:
         # Fallback to system fonts
         font_sub = FontProperties(
             family="monospace", weight="normal", size=base_sub * scale_factor
         )
-        font_coords = FontProperties(
-            family="monospace", size=base_coords * scale_factor
-        )
-        font_attr = FontProperties(family="monospace", size=base_attr * scale_factor)
 
     # Format city name based on script type
     # Latin scripts: apply uppercase and letter spacing for aesthetic
@@ -703,52 +691,12 @@ def create_poster(
         zorder=11,
     )
 
-    lat, lon = point
-    coords = (
-        f"{lat:.4f}° N / {lon:.4f}° E"
-        if lat >= 0
-        else f"{abs(lat):.4f}° S / {lon:.4f}° E"
-    )
-    if lon < 0:
-        coords = coords.replace("E", "W")
-
-    ax.text(
-        0.5,
-        0.07,
-        coords,
-        transform=ax.transAxes,
-        color=THEME["text"],
-        alpha=0.7,
-        ha="center",
-        fontproperties=font_coords,
-        zorder=11,
-    )
-
     ax.plot(
         [0.4, 0.6],
         [0.125, 0.125],
         transform=ax.transAxes,
         color=THEME["text"],
         linewidth=1 * scale_factor,
-        zorder=11,
-    )
-
-    # --- ATTRIBUTION (bottom right) ---
-    if FONTS:
-        font_attr = FontProperties(fname=FONTS["light"], size=8)
-    else:
-        font_attr = FontProperties(family="monospace", size=8)
-
-    ax.text(
-        0.98,
-        0.02,
-        "© OpenStreetMap contributors",
-        transform=ax.transAxes,
-        color=THEME["text"],
-        alpha=0.5,
-        ha="right",
-        va="bottom",
-        fontproperties=font_attr,
         zorder=11,
     )
 
