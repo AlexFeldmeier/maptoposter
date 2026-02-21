@@ -1,19 +1,19 @@
 .venv\Scripts\activate.bat
 
 MSP
-python3 create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 8.5 -H 11 -d 200000 -t midnight_blue
+python create_map_poster.py -W 8.5 -H 11 -c "MSP" -C "Minnesota" -lat 44.97 -long -93.23 -d 200000 -t midnight_blue
 
-MSP phone
-python3 create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 2.9 -H 6.2 -d 150000 -t midnight_blue --no-text --no-gradient
+MSP phone - old
+python create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 2.9 -H 6.2 -d 150000 -t midnight_blue --no-text --no-gradient
 
 Eagan
-python3 create_map_poster.py -c "eagan, mn" -C "USA" --name "Eagan" --country-label "Minnesota" -W 8.5 -H 11 -d 28000 -t midnight_blue
+python create_map_poster.py -W 8.5 -H 11 -c "Eagan" -C "Minnesota" -lat 44.82 -long -93.15 -d 24000 -t midnight_blue
 
-Eagan phone
-python3 create_map_poster.py --lat 44.806 --lon -93.157 --name "Eagan" --country-label "Minnesota" -W 2.9 -H 6.1 -d 18000 -t ocean --no-text --no-gradient
+Eagan phone - old
+python create_map_poster.py --lat 44.806 --lon -93.157 --name "Eagan" --country-label "Minnesota" -W 2.9 -H 6.1 -d 18000 -t ocean --no-text --no-gradient
 
-Waunakee
-python3 create_map_poster.py -c "village center pond waunakee" -C "USA" --name "Waunakee" --country-label "Wisconsin" -W 8.5 -H 11 -d 12000 -t custom
+Waunakee - old
+python create_map_poster.py -c "village center pond waunakee" -C "USA" --name "Waunakee" --country-label "Wisconsin" -W 8.5 -H 11 -d 12000 -t custom
 {
   "name": "Custom",
   "description": "Custom",
@@ -30,11 +30,11 @@ python3 create_map_poster.py -c "village center pond waunakee" -C "USA" --name "
   "road_default": "#0098A0"
 }
 
-Madison
-python3 create_map_poster.py -c "madison" -C "USA" --name "Madison" --country-label "Wisconsin" -W 8.5 -H 11 -d 65000 -t terracotta
+Madison - old
+python create_map_poster.py -c "madison" -C "USA" --name "Madison" --country-label "Wisconsin" -W 8.5 -H 11 -d 65000 -t terracotta
 
-Star Lake
-python3 create_map_poster.py --lat 46.0309 --lon -89.4845 --name "Star Lake" --country-label "Wisconsin" -W 8.5 -H 11 -d 18000 -t custom
+Star Lake - old
+python create_map_poster.py --lat 46.0309 --lon -89.4845 --name "Star Lake" --country-label "Wisconsin" -W 8.5 -H 11 -d 18000 -t custom
 {
   "name": "Custom",
   "description": "Custom",
