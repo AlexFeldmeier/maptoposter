@@ -33,3 +33,7 @@ test_venv/
 htmlcov/
 .coverage
 .pytest_cache/
+
+# Posters output (keep map-notes.txt)
+posters/
+!posters/map-notes.txt
