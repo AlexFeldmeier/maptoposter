@@ -6,6 +6,9 @@ python create_map_poster.py -W 8.5 -H 11 -c "MSP" -C "Minnesota" -lat 44.97 -lon
 MSP phone - old
 python create_map_poster.py -c "msp" -C "USA" --name "MSP" --country-label "Minnesota" -W 2.9 -H 6.2 -d 150000 -t midnight_blue --no-text --no-gradient
 
+Fox Point
+python create_map_poster.py -W 8.5 -H 11 -c "Fox Point" -C "Wisconsin" -lat 43.160 -long -87.905 -d 21000 -t terracotta
+
 Eagan
 python create_map_poster.py -W 8.5 -H 11 -c "Eagan" -C "Minnesota" -lat 44.82 -long -93.15 -d 24000 -t midnight_blue
 
